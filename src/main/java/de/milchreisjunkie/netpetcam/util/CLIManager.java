@@ -6,6 +6,7 @@ import java.io.IOException;
 import org.apache.commons.cli.CommandLine;
 import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.HelpFormatter;
 import org.apache.commons.cli.Options;
 import org.apache.commons.cli.ParseException;
 import org.apache.log4j.Logger;
@@ -33,6 +34,12 @@ public class CLIManager {
 		// parse the command line arguments
 		CommandLineParser parser = new DefaultParser();
 		CommandLine line = parser.parse(options, args);
+		HelpFormatter formatter = new HelpFormatter();
+		
+		if(line.hasOption("help")) {
+			formatter.printHelp("NPetcam.jar", options);
+			System.exit(0);
+		}
 		
 		if(line.hasOption("configfile")) {
 			configmanager.loadProperties(new File(line.getOptionValue("configfile")));
