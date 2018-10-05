@@ -53,6 +53,7 @@
   
  	<build>
  		<finalName>NPetcam</finalName>
+ 		<defaultGoal>clean compile assembly:single</defaultGoal>
 		<pluginManagement>
 			<plugins>
 				<plugin>
