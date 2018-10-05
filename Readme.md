@@ -13,7 +13,11 @@ usage: java -jar NPetcam.jar
  -p,--wifipass <arg>     Sets the WPA2 key for the WIFI access point
  -r,--rpi-mode           Sets the raspberry pi mode for capture with
                          rpicam
+<<<<<<< HEAD
  -s,--stream             Instead of Dropbox image, stream to localhost:8080
+=======
+ -s,--ssid <arg>         Sets the ssid for the WIFI access point
+>>>>>>> 93a4d6ea88be950753a943530a4b86db5f4af3f9
  -t,--token <arg>        Sets the dropbox access token
 ```
 
@@ -33,6 +37,7 @@ interval=5
 
 # Set the maximum number of image which are stored in the dropbox
 maximages=10
+<<<<<<< HEAD
 ```
 
 ## Remote configuration
@@ -47,6 +52,16 @@ maximages=10
 NetPetcam will find this file and changes the settings locally.
 
 ## Build
+=======
+
+
+# Set up your WIFI credentials to login to your local WIFI, if you want
+# Its neccessary for the rapsberry pi
+ssid=
+wlanpw=
+```
+
+>>>>>>> 93a4d6ea88be950753a943530a4b86db5f4af3f9
 If you want to build the program for your self, you can use maven like this:
 Goals: `clean compile assembly:single`
 
@@ -54,7 +69,14 @@ Goals: `clean compile assembly:single`
 
 To run this program correctly you need the following things:
 
+<<<<<<< HEAD
  - Java Runtime Environment 8 (JRE-8) or higher
  - Dropbox-account and an access-token (don't worry is free and easy :))
  - Webcam or Rapsberry Pi + Pi-Cam
  - Pets :-)
+=======
+ - Java Runtime Environment 8 (JRE-8)
+ - Dropbox-account and an access-token (don't worry is free and easy :))
+ - Webcam or Rapsberry Pi + Pi-Cam
+ - Pets :)
+>>>>>>> 93a4d6ea88be950753a943530a4b86db5f4af3f9
