@@ -1,6 +1,6 @@
 ![alt-text](https://raw.githubusercontent.com/MilchReis/NetPetcam/master/Logo.png "Logo")
 
-The NETPetcam is a simple solution to capture continuously pictures of your pets and save it to your personal dropbox. In that way you are able to check your pets from everywhere.
+The NetPetcam is a simple solution to capture continuously pictures of your pets and save it to your personal dropbox. In that way you are able to check your pets from everywhere without router port forwarding.
 
 ## Man-Page ##
 
@@ -10,16 +10,14 @@ usage: java -jar NPetcam.jar
  -h,--help               Prints this help
  -i,--interval <arg>     Sets the capture interval in seconds
  -m,--max-images <arg>   Sets the maximum of saved images in the dropbox
- -p,--wifipass <arg>     Sets the WPA2 key for the WIFI access point
- -r,--rpi-mode           Sets the raspberry pi mode for capture with
-                         rpicam
+ -r,--rpi-mode           Sets the raspberry pi mode for capture with rpicam
  -s,--stream             Instead of Dropbox image, stream to localhost:8080
  -t,--token <arg>        Sets the dropbox access token
 ```
 
-## Download / Run / Build ##
+## Download and run ##
 
-The simplest way to run NETPetcam is to download the jar-file and execute it. Feel free to [download](https://github.com/MilchReis/NetPetcam/raw/master/bin/NPetcam-1.0.1.jar "download-address") it.
+The simplest way to run NetPetcam is to download the jar-file and execute it. Feel free to [download](https://github.com/Milchreis/NetPetcam/releases) it.
 
 With the command `java -jar NPetcam.jar -c /path/to/your/npetcam.properties` you start the program.
 
@@ -36,7 +34,7 @@ maximages=10
 ```
 
 ## Remote configuration
-If you want to change the interval or maximages settings from remote, than you can create a directory "admin" in your dropbox app directory and place config.properties file like:
+If you want to change the interval or maximages settings from remote, than you can create a directory "admin" in your dropbox app directory and place a config.properties file like this:
 ```
 # Set up the shooting and uploading interval in seconds 
 interval=5
@@ -55,6 +53,6 @@ Goals: `clean compile assembly:single`
 To run this program correctly you need the following things:
 
  - Java Runtime Environment 8 (JRE-8) or higher
- - Dropbox-account and an access-token (don't worry is free and easy :))
+ - Dropbox-account and an access-token (don't worry is free and easy, look [here](https://blogs.dropbox.com/developers/2014/05/generate-an-access-token-for-your-own-account/))
  - Webcam or Rapsberry Pi + Pi-Cam
  - Pets :-)
