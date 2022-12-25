@@ -89,3 +89,7 @@ typings/
 
 # VS Code
 settings.json
+
+# IntelliJ
+.idea
+*.iml
